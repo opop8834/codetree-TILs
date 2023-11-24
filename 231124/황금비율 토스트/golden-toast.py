@@ -89,11 +89,20 @@ while it != list.end():
 for i in range(y):
     temp_alpha = input()
     if temp_alpha == "L":  # it 앞으로 점프   맨 앞이면 무시
-        it = it.prev
+        if it == list.begin():
+            continue
+        else:
+            it = it.prev
     elif temp_alpha == "R": # it 뒤로 점프    맨 뒤면 무시
-        it = it.next
+        if it == list.end():
+            continue
+        else:
+            it = it.next
     elif temp_alpha == "D": # it 바로 뒤 제거  맨 뒤면 무시
-        it = list.erase(it)
+        if it == list.end():
+            continue
+        else:
+            it = list.erase(it)
     elif "P" in temp_alpha: # it에 문자 추가   it의 위치는 그 문자 바로 뒤
         temp_alpha = temp_alpha.replace("P", "")
         temp_alpha = temp_alpha.replace(" ", "")
