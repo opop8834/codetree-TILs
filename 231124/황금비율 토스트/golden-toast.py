@@ -93,7 +93,7 @@ for i in range(y):
     elif temp_alpha == "R": # it 뒤로 점프    맨 뒤면 무시
         it = it.next
     elif temp_alpha == "D": # it 바로 뒤 제거  맨 뒤면 무시
-        list.erase(it)
+        it = list.erase(it)
     elif "P" in temp_alpha: # it에 문자 추가   it의 위치는 그 문자 바로 뒤
         temp_alpha = temp_alpha.replace("P", "")
         temp_alpha = temp_alpha.replace(" ", "")
