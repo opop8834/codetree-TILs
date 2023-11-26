@@ -25,6 +25,6 @@ num = int(input())
 text = input().split()
 for s in text:
     arr.append(int(s))
-print(arr)
 arr = update_bubble(arr)
-print(arr)
+for s in arr:
+    print(s, end=' ')
