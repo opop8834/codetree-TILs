@@ -3,7 +3,7 @@
 def selection_sort(arr):
     for i in range(len(arr)-1):
         min = i
-        for j in range(i , len(arr)-1):  # 최솟값 찾기
+        for j in range(i , len(arr)):  # 최솟값 찾기
             if arr[j] < arr[min]:
                 min = j
         if arr[i]> arr[min]:
