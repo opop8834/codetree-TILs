@@ -43,7 +43,7 @@ for i in range(len(text)):
     if "(" == temp:
         temp_stack.push(temp)
     else:
-        if temp_stack.empty == 1:
+        if temp_stack.empty() == 1:
             tp = 1
             break
         else:
