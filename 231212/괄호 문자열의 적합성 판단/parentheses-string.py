@@ -6,7 +6,7 @@ class Stack:
     def pop(self):
         if len(self.st) <= 0:
             raise Exception("Stack is empty")
-        return self.st.pop()
+        self.st.pop()
     def size(self):
         return len(self.st)
     def empty(self):
@@ -37,13 +37,18 @@ class Stack:
 
 temp_stack = Stack()
 text = input()
+tp = 0
 for i in range(len(text)):
     temp = text[i]
     if "(" == temp:
         temp_stack.push(temp)
     else:
-        temp_stack.pop()
-if temp_stack.empty() == 1:
+        if temp_stack.empty == 1:
+            tp = 1
+            break
+        else:
+            temp_stack.pop()
+if temp_stack.empty() == 1 and tp == 0:
     print("Yes")
 else:
     print("No")
