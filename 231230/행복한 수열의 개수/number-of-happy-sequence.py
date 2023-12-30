@@ -26,6 +26,7 @@ for i in range(len(arr)):
             answer += 1
             count = 1
             break
+    count = 1
 count = 1
 for i in range(len(arr)):
     for j in range(len(arr)):
@@ -40,4 +41,5 @@ for i in range(len(arr)):
             answer += 1
             count = 1
             break
+    count = 1
 print(answer)
