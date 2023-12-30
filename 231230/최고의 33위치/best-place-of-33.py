@@ -6,8 +6,6 @@ for i in range(num):
     text = input().split()
     for j in range(num):
         arr[j][i] = int(text[j])
-        
-print(arr)
 
 one = 0
 second = 0
@@ -18,7 +16,7 @@ while(True):
     if one+2 >= len(arr):
         second += 1
         one = 0
-    elif second+2 >= len(arr):
+    if second+2 >= len(arr):
         break
     else:
         count += arr[one][second]
