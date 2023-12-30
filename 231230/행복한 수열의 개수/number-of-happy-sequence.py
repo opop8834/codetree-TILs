@@ -21,13 +21,15 @@ for i in range(len(arr)):
             ins = arr[j][i]
         if prev == ins:
             count += 1
-        prev = arr[j][i]
         if count == m:
             answer += 1
             count = 1
             break
+        prev = arr[j][i]
     count = 1
 count = 1
+prev = -99
+ins = -99
 for i in range(len(arr)):
     for j in range(len(arr)):
         if i == 0:
@@ -36,10 +38,10 @@ for i in range(len(arr)):
             ins = arr[i][j]
         if prev == ins:
             count += 1
-        prev = arr[i][j]
         if count == m:
             answer += 1
             count = 1
             break
+        prev = arr[i][j]
     count = 1
 print(answer)
