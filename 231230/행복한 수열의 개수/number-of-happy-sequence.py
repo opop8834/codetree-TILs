@@ -19,14 +19,18 @@ for i in range(len(arr)):
             prev = arr[j][i]
         else:
             ins = arr[j][i]
-        if prev == ins:
-            count += 1
-        if count == m:
-            answer += 1
-            count = 1
-            break
+            if prev == ins:
+                count += 1
+            else:
+                count = 1
+            if count == m:
+                answer += 1
+                count = 1
+                break
         prev = arr[j][i]
     count = 1
+    
+print(answer)
 count = 1
 prev = -99
 ins = -99
@@ -36,12 +40,14 @@ for i in range(len(arr)):
             prev = arr[i][j]
         else:
             ins = arr[i][j]
-        if prev == ins:
-            count += 1
-        if count == m:
-            answer += 1
-            count = 1
-            break
+            if prev == ins:
+                count += 1
+            else:
+                count = 1
+            if count == m:
+                answer += 1
+                count = 1
+                break
         prev = arr[i][j]
     count = 1
 print(answer)
