@@ -30,7 +30,6 @@ for i in range(len(arr)):
         prev = arr[j][i]
     count = 1
     
-print(answer)
 count = 1
 prev = -99
 ins = -99
