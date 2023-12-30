@@ -29,7 +29,6 @@ for i in range(len(arr)):
                 break
         prev = arr[j][i]
     count = 1
-    
 count = 1
 prev = -99
 ins = -99
@@ -39,14 +38,17 @@ for i in range(len(arr)):
             prev = arr[i][j]
         else:
             ins = arr[i][j]
-            if prev == ins:
-                count += 1
-            else:
-                count = 1
             if count == m:
                 answer += 1
                 count = 1
                 break
+            if prev == ins:
+                count += 1
+            else:
+                count = 1
         prev = arr[i][j]
     count = 1
+    
+if m == 1:
+    answer = num*2
 print(answer)
