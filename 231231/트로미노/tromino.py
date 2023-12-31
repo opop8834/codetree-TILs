@@ -45,7 +45,6 @@ while(True):
         first = 0
         if second > m-1:
             break
-print(max_count)
 count = 0
 first = 0
 second = 0
