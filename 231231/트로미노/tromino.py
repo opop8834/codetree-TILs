@@ -26,7 +26,7 @@ while(True):
     else:
         first += 1
         second = 0
-        if first >= n-1:
+        if first > n-1:
             break
 count = 0
 first = 0
@@ -43,8 +43,9 @@ while(True):
     else:
         second += 1
         first = 0
-        if second >= m-1:
+        if second > m-1:
             break
+print(max_count)
 count = 0
 first = 0
 second = 0
