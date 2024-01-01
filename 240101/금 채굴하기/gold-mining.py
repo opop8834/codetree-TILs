@@ -10,7 +10,7 @@ for i in range(n):
 mid = 0
 mid_second = 0
 count = 0
-max_answer_count = -99
+max_answer_count = 0
 for k in range(n):
     mid = 0
     mid_second = 0
