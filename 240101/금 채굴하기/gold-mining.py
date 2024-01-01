@@ -11,7 +11,7 @@ mid = 0
 mid_second = 0
 count = 0
 max_answer_count = 0
-for k in range(n):
+for k in range(n+1):
     mid = 0
     mid_second = 0
     count = 0
