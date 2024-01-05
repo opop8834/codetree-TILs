@@ -12,7 +12,7 @@ for i in range(N):
 for i in range(Q):
     r,d = input().split()
     temp_d = d
-    temp_r = int(r)
+    temp_r = int(r)-1
     r = int(r)-1
     while(r>=0):
         if 'R' == d: # 왼쪽 shift
@@ -41,7 +41,15 @@ for i in range(Q):
     else:
         d = 'L'
     while(r<=N-1):
-        if 'R' == d: # 왼쪽 shift
+        if r == temp_r:
+            if r < N-1:
+                tp = 0
+                for i in range(M):
+                    if arr[r][i] == arr[r+1][i]:
+                        tp = 1
+                if tp != 1:
+                    break              
+        elif 'R' == d: # 왼쪽 shift
             temp= arr[r][0]
             for i in range(0, M-1):
                 arr[r][i] = arr[r][i+1]
