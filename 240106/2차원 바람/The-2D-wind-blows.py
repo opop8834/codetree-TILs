@@ -4,6 +4,7 @@ M = int(M)
 Q = int(Q)
 
 arr = [[0 for i in range(M)] for j in range(N)]
+temp_arr = [[0 for i in range(M)] for j in range(N)]
 for i in range(N):
     text = input().split()
     for j in range(M):
@@ -33,8 +34,40 @@ for i in range(Q):
     arr[r2-1][c1] = temp4
 
 
+    for ii in range(N):
+        for jj in range(M):
+            temp_arr[ii][jj] = arr[ii][jj]
+    for i in range(r1, r2+1):
+        for j in range(c1, c2+1):
+            sum = arr[i][j]
+            count = 1
+            if j+1 <= M-1:
+                sum += arr[i][j+1] # 3+1 = 4
+                count += 1
+            else:
+                sum += 0
+            if i+1 <= N-1:
+                sum += arr[i+1][j] # 4 +4 =8
+                count += 1
+            else:
+                sum += 0
+            if j-1 >= 0:
+                sum += arr[i][j-1]
+                count += 1
+            else:
+                sum += 0 # 8 + 0 = 8
+            if i-1 >= 0:
+                sum += arr[i-1][j] # 8 + 0 = 8
+                count += 1
+            else:
+                sum += 0
+            temp_arr[i][j] = int(sum/count)
+
+
+
+
 
 for i in range(N):
     for j in range(M):
-        print(arr[i][j],end = ' ')
+        print(temp_arr[i][j],end = ' ')
     print()
