@@ -9,7 +9,9 @@ for i in range(N):
     text = input().split()
     for j in range(M):
         arr[i][j] = int(text[j])
-
+for i in range(N):
+    for j in range(M):
+        temp_arr[i][j] = arr[i][j]
 for i in range(Q):
     r1,c1,r2,c2 = input().split()
     r1 = int(r1)-1
