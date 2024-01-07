@@ -12,7 +12,7 @@ for i in range(N):
 for i in range(N):
     for j in range(M):
         temp_arr[i][j] = arr[i][j]
-for i in range(Q):
+for q in range(Q):
     r1,c1,r2,c2 = input().split()
     r1 = int(r1)-1
     c1 = int(c1)-1
@@ -23,16 +23,16 @@ for i in range(Q):
     temp2 = arr[r1][c2]
     temp3 = arr[r2][c2]
     temp4 = arr[r2][c1]
-    for j in range(c2,c1-1,-1):
-        arr[r1][j] = arr[r1][j-1]
-    for j in range(r2, r1+1,-1):
-        arr[j][c2] = arr[j-1][c2]
+    for temp in range(c2,c1-1,-1):
+        arr[r1][temp] = arr[r1][temp-1]
+    for temp in range(r2, r1+1,-1):
+        arr[temp][c2] = arr[temp-1][c2]
     arr[r1+1][c2] = temp2
-    for j in range(c1, c2-1):
-        arr[r2][j] = arr[r2][j+1]
+    for temp in range(c1, c2-1):
+        arr[r2][temp] = arr[r2][temp+1]
     arr[r2][c2-1] = temp3
-    for j in range(r1, r2-1):
-        arr[j][c1] = arr[j+1][c1]
+    for temp in range(r1, r2-1):
+        arr[temp][c1] = arr[temp+1][c1]
     arr[r2-1][c1] = temp4
 
     for ii in range(N):
@@ -63,6 +63,9 @@ for i in range(Q):
             else:
                 sum += 0
             temp_arr[i][j] = int(sum/count)
+    for ii in range(N):
+        for jj in range(M):
+            arr[ii][jj] = temp_arr[ii][jj]
 
 
 
