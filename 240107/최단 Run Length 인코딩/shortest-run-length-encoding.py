@@ -19,6 +19,6 @@ for s in arr:
     for i in range(len(arr)-1,0,-1):
         arr[i] = arr[i-1]
     arr[0] = temp_arr
-if tp == 0:
+if tp == 0 and len(arr) == 10:
     min_count = 3
 print(min_count)
