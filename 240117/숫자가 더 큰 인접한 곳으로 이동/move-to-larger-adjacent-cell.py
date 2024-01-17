@@ -29,7 +29,7 @@ while(True):
                 print(temp_number, end = ' ')
                 r = i+dx[jj]
                 c = j+dy[jj]
-                i = 0
-                j = 0
+                i = r-1
+                j = c-1
                 break
     j += 1
