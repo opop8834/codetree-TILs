@@ -23,6 +23,8 @@ while(True):
         break
     if i == r and j == c:
         for jj in range(4):
+            if i + dx[jj] >= n or j + dx[jj] >= n:
+                continue
             temp_number = arr[i+dx[jj]][j+dy[jj]]
             current_number = arr[i][j]
             if (temp_number > current_number):
