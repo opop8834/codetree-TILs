@@ -34,7 +34,7 @@ def bfs(x,y):
                 q.append((new_x,new_y))
     for i in range(n):
         for j in range(n):
-            if graph[i][j] == max_number:
+            if graph[i][j] == max_number and visited[i][j]:
                 return i,j
     return -999,-999
 
