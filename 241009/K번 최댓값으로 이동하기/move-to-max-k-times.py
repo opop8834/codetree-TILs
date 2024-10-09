@@ -36,11 +36,11 @@ def bfs(x,y):
         for j in range(n):
             if graph[i][j] == max_number:
                 return i,j
-    return -1,-1
+    return -999,-999
 
 for i in range(k):
     new_r, new_c = bfs(r,c)
-    if new_r == -1 and new_c == -1:
+    if new_r == -999 and new_c == -999:
         break
     r = new_r
     c = new_c
