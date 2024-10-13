@@ -10,7 +10,7 @@ for i in range(n):
             graph[i].append(int(temp[j]))
 
 if n == 1:
-    print(1)
+    print(graph[0][0])
 else:
     dp[0][0] = graph[0][0]
     dp[0][1] = graph[0][1] + graph[0][0]
