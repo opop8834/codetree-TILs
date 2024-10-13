@@ -23,4 +23,4 @@ else:
         #     count += 1
         
         dp[i] = dp[i-2] + dp[i-3]
-    print(dp[-1])
+    print(dp[-1] % 10007)
