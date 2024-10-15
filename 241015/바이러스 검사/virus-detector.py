@@ -1,9 +1,10 @@
 n = int(input())
 
-count = list(map(int,input().split(" ")))
+count = list(map(int, input().split()))
+
 
 # 팀장 최대 , 팀원 최대
-owner, team = map(int,input().split(" "))
+owner, team = map(int,input().split())
 sum_ = 0
 for s in count:
     if s > owner:
