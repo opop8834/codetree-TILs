@@ -1,11 +1,12 @@
 import itertools
+import sys
 
 n = int(input())
 temp = list(map(int,input().split()))
 cal = list(map(int,input().split()))
 
-max_ = -9999
-min_ = 9999
+max_ = -sys.maxsize
+min_ = sys.maxsize
 
 cal_str = []
 for i in range(cal[0]):
@@ -33,6 +34,7 @@ for s in result:
             sum_ -= temp[i]
         if s[i-1] == '*':
             sum_ *= temp[i]
+    # print(sum_)
     if sum_ < min_:
         min_ = sum_
     if sum_ >= max_:
