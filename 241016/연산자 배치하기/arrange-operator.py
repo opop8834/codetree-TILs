@@ -16,12 +16,9 @@ for i in range(cal[1]):
 for i in range(cal[2]):
     cal_str.append("*")
 
-comb = list(itertools.permutations(cal_str,n-1))
+comb = set(itertools.permutations(cal_str,n-1))
 
-result = []
-for value in comb:
-    if value not in result:
-        result.append(value)
+result = comb
 
 # print(result)
 
