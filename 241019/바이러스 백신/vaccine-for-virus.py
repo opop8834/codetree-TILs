@@ -43,6 +43,7 @@ def bfs(s):
         for j in range(n):
             if graph[i][j] == 0 and not visited[i][j]:
                 count = -99
+    # print(visited,count)
 
 
 
@@ -58,7 +59,7 @@ for s in comb:
     count = -1
     visited = [[False for _ in range(n)] for _ in range(n)]
 
-if min_count == min_count:
+if min_count == 999:
     print(-1)
 else:
     print(min_count)
